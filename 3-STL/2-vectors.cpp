@@ -42,12 +42,12 @@ void explainVector()
     cout << *(it) << endl;
     // this increments the location by two indexes
 
-    vector<int>::iterator it2 = v.end()
+    vector<int>::iterator it2 = v.end();
                                 
     // points to the memory location at the end of the vector, that is , to the empty memory location after the last element memory occupied
-    vector<int>::iterator it3 = v.rend()
+    vector<int>::iterator it3 = v.rend();
     // reverses the vector first and then points to its end
-    vector<int>::iterator it4 = v.rbegin()
+    vector<int>::iterator it4 = v.rbegin();
     // reverses the vector first and then points to its beginning
 
     cout<< v[0] << " " << v.at(0);
