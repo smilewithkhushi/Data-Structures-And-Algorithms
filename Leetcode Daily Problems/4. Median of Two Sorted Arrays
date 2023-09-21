@@ -1,0 +1,28 @@
+class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        for (auto x: nums2){
+            nums1.push_back(x);
+        }
+        sort(nums1.begin(), nums1.end());
+        int len=nums1.size();
+        int med;
+        if (len%2==0){
+            int a=nums1[(len-1)/2];
+            cout<<"a"<<a<<endl;
+            int b=nums1[len/2];
+            cout<<"b"<<b<<endl;
+
+            double med=(a+b)/2.0;
+            cout<<"med"<<med<<endl;
+            return med;
+        }else{
+            med=nums1[len/2];
+        }
+
+        return med;
+    }
+};
+
+
+
