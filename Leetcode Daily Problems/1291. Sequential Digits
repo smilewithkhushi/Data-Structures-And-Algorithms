@@ -1,0 +1,22 @@
+//1291. Sequential Digits
+//https://leetcode.com/problems/sequential-digits/?envType=daily-question&envId=2024-02-02
+
+class Solution {
+public:
+    vector<int> sequentialDigits(int low, int high) {
+        vector<int> seq;
+        string s="123456789";
+        for (int i=0; i<s.size(); i++){
+            string x="";
+            for (int j=i; j<s.size(); j++){
+                x+=s[j];
+                int num=stoi(x);
+                if (low <= num && num <= high) {
+                    seq.push_back(num);
+                }
+            }
+        }
+        sort(seq.begin(), seq.end());
+        return seq;
+    }
+};
